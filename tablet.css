@@ -1,0 +1,72 @@
+body {
+  grid-template-rows: repeat(9, minmax(1fr, 5fr));
+  grid-template-columns: repeat(14, 1fr);
+  background: url(./images/bg-desktop.svg) no-repeat 20% 0;
+  background-size: 80% 100%;
+  grid-template-areas:
+    ". header header header header header header header  header  header  header  header  header  ."
+    ". header header header header header header header  header  header  header  header  header  ."
+    ". aside  aside  aside  aside  aside  aside  section section section section section section ."
+    ". aside  aside  aside  aside  aside  aside  section section section section section section ."
+    ". aside  aside  aside  aside  aside  aside  section section section section section section ."
+    ". aside  aside  aside  aside  aside  aside  section section section section section section ."
+    ". aside  aside  aside  aside  aside  aside  section section section section section section ."
+    ". aside  aside  aside  aside  aside  aside  section section section section section section ."
+    ". footer footer footer footer footer footer footer  footer  footer  footer  footer  footer  .";
+}
+
+header {
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+header a {
+  width: 15%;
+}
+
+aside {
+  margin: 0;
+}
+
+section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 20%;
+}
+
+.section {
+  width: 92%;
+  text-align: start;
+}
+
+.section h2 {
+  font-size: 3rem;
+  padding: 0 20% 0 0;
+}
+
+.section button {
+  height: 4.3rem;
+  width: 15rem;
+}
+
+.section button:hover {
+  box-shadow: 0 2px 8px hsl(258, 40%, 41%);
+}
+
+footer {
+  height: 100px;
+  padding-right: 3%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer div {
+  width: 13rem;
+  margin: 0;
+}
+
+.social-container {
+  width: 35px;
+  height: 35px;
+}
