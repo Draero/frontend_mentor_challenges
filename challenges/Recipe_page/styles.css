@@ -1,0 +1,188 @@
+@import url("../../general/colors.css");
+
+body {
+  background-color: var(--stone-150);
+  /* setting the paragraph font */
+  font-family: "Outfit", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+}
+
+main {
+  background-color: var(--white);
+  padding-bottom: 3rem;
+}
+
+/* ----------- Corresponding Image ----------- */
+.header {
+  width: 100%;
+}
+
+.header figure {
+  width: 100%;
+}
+
+.header figure img {
+  width: 100%;
+  height: auto;
+}
+/* ------------------------------------------- */
+
+.main {
+  margin: 0 3.2rem;
+  color: var(--stone-600);
+}
+
+.main > hr {
+  margin-bottom: 2.8rem;
+}
+
+.title {
+  color: var(--stone-900);
+  margin: 4rem 0 3rem 0;
+}
+
+.title p {
+  color: var(--stone-600);
+}
+
+/* ----------- Preparation time ----------- */
+.time {
+  background-color: var(--rose-50);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2.8rem;
+}
+
+.time h3 {
+  color: var(--rose-800);
+}
+
+.time-list div{
+  display: flex;
+  align-items: center;
+  margin: 1.2rem 1rem .5rem 1rem;
+}
+
+.time-list div svg {
+  margin-right: .3rem;
+  fill: var(--rose-800);
+}
+/* ---------------------------------------- */
+
+/* -------------- Ingredients -------------- */
+.ingredients-list {
+  margin-bottom: 3.2rem;
+}
+
+.ingredients-list > div {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.ingredients-list div svg {
+  flex-shrink: 0; /* To adjust the flex flow for the child element */
+  margin-right: .3rem;
+  fill: var(--brown-800);
+}
+/* ----------------------------------------- */
+
+/* ---------------- Instructions ---------------- */
+.instructions {
+  margin-bottom: 3.2rem;
+}
+
+.instructions-list div {
+  display: flex;
+  align-items: start;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.instructions-list div .index {
+  color: var(--brown-800);
+}
+/* ---------------------------------------------- */
+
+.nutrition-table {
+  margin-top: 3rem;
+}
+
+.nutrition-table-pool {
+  padding: 0 1.4rem 0 3.4rem;
+}
+
+.nutrition-table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;;
+}
+
+/* -------------- Coded by -------------- */
+footer {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--rose-800);
+}
+/* -------------------------------------- */
+
+/* ------------- Miscellaneous ------------- */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, var(--stone-150), var(--stone-150));
+  margin: 1.4rem 0;
+}
+
+.title-font {
+  font-family: "Young Serif", system-ui;
+  font-style: normal;
+  line-height: 3.4rem;
+  margin-bottom: 2rem;
+}
+
+.s-title-color {
+  color: var(--brown-800);
+}
+
+.list-m-text {
+  margin-left: 2.4rem;
+}
+
+.brown {
+  color: var(--brown-800);
+}
+/* ----------------------------------------- */
+
+@media (min-width: 736px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  main {
+    max-width: 736px;
+    padding: 4rem;
+    margin: 2rem 0;
+    border-radius: 2rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .main {
+    margin: 0;
+  }
+
+  .header figure img {
+    border-radius: 1rem;
+  }
+}

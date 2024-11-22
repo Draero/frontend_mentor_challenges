@@ -1,0 +1,135 @@
+@import url("../../general/colors.css");
+
+html { background-color: var(--pale-blue-1); }
+
+body {
+  font-size: 1.6rem;
+  font-family: "Red Hat Display", sans-serif;
+  background: url("./images/pattern-background-mobile.svg") no-repeat 0 0;
+  background-size: 100% 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 33rem;
+  height: 56rem;
+  background-color: var(--very-pale-blue);
+  border-radius: 2rem;
+  box-shadow: 0 3rem 3rem hsl(226, 78%, 87%);
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  color: var(--desaturaded-blue);
+  display: flex;
+  flex-direction: column;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+figure figcaption {
+  width: 100%;
+  padding: 3rem 2.6rem 2.6rem 2.6rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  text-align: center;
+}
+
+.description h1 {
+  color: var(--dark-blue-2);
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 1.4rem;
+}
+
+.description p {
+  line-height: 2.6rem;
+}
+
+.payment-plan-container {
+  width: 100%;
+  padding: 1.5rem;
+  margin: 2.4rem 0;
+  background-color: var(--pale-blue-1);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment-plan {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.payment-plan-image {
+  width: 4.6rem;
+  height: 4.6rem;
+  background: url("./images/icon-music.svg") no-repeat center;
+  background-size: cover;
+}
+
+.payment-plan-selected h2 {
+  color: var(--dark-blue-2);
+  font-size: 1.6rem;
+}
+
+.payment-plan-pick a {
+  font-size: 1.5rem;
+  color: var(--bright-blue);
+}
+
+.payment-plan-pick a:active {
+  text-decoration: none;
+  color: hsl(245, 83%, 68%);
+}
+
+.transaction-buttons {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-buttons button {
+  width: 100%;
+  border: none;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  color: var(--very-pale-blue);
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2rem 2rem hsl(249, 100%, 93%);
+  background-color: var(--bright-blue);
+}
+
+.transaction-buttons button:active {
+  background-color: hsl(245, 83%, 68%);
+}
+
+.transaction-buttons a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--very-pale-blue);
+}
+
+.transaction-buttons a:active {
+  color: var(--dark-blue-2);
+}

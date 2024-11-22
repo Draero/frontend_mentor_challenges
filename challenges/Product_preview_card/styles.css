@@ -1,0 +1,100 @@
+@import url("../../general/colors.css");
+
+body {
+  background-color: var(--cream);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  color: var(--dark-grayish-blue-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 90%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  width: 100%;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.aside-img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+section {
+  width: 100%;
+  background-color: var(--white);
+  padding: 2rem;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+section h1 {
+  font-family: 'Fraunces', serif;
+  color: var(--very-dark-blue-2);
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+section > p {
+  line-height: 2.2rem;
+}
+
+section > :nth-child(1) {
+  margin-bottom: 1rem;
+}
+
+.price {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.price h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 3rem;
+  color: var(--dark-cyan-2);
+  margin-right: 2rem;
+}
+
+.price p {
+  text-decoration: line-through;
+}
+
+section button {
+  height: 5rem;
+  background-color: var(--dark-cyan-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+section button .svg-shop-cart {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 1rem;
+  background: url("./images/icon-cart.svg") no-repeat center;
+  background-size: 100% 100%;
+}
+
+section button:active {
+  background-color: hsl(156, 42%, 18%);
+}

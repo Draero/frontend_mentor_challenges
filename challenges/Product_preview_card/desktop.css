@@ -1,0 +1,44 @@
+main {
+  flex-direction: row;
+  width: 54rem;
+}
+
+aside {
+  width: 50%;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 0;
+  background: url("./images/image-product-desktop.jpg") no-repeat center;
+  background-size: cover;
+}
+
+section {
+  width: 50%;
+  padding: 2.7rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0;
+}
+
+section > p {
+  line-height: 2.2rem;
+  font-size: 1.3rem;
+}
+
+section h1 {
+  line-height: 3rem;
+  font-size: 2.9rem;
+  margin-bottom: 2rem;
+}
+
+section > :nth-child(1) {
+  font-size: 1.2rem;
+}
+
+section button {
+  border-radius: .6rem;
+  height: 4rem;
+}
+
+.price p {
+  font-size: 1.2rem;
+}

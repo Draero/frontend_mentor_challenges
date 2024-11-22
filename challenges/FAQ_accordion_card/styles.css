@@ -1,0 +1,232 @@
+@import url("../../general/colors.css");
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: linear-gradient(var(--soft-violet-1), var(--soft-blue-1));
+  padding: 11rem 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 33rem;
+  height: 54rem;
+  border-radius: 2.6rem;
+  background-color: var(--light-grayish-blue);
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  width: 100%;
+  height: 11rem;
+  border-radius: inherit;
+  position: relative;
+  overflow: visible;
+  margin-bottom: 2rem;
+}
+
+aside {
+  overflow: auto;
+  height: 38rem;
+}
+
+aside::-webkit-scrollbar {
+  width: .4rem;
+}
+aside::-webkit-scrollbar-thumb {
+  background-color: var(--dark-grayish-blue-1);
+}
+
+hr {
+  width: 80%;
+  margin-left: 10%;
+}
+
+h1 {
+  text-align: center;
+  color: var(--very-dark-desaturated-blue-1);
+  font-size: 3rem;
+}
+
+.undercard-background {
+  height: 11rem;
+  width: 26rem;
+  position: absolute;
+  left: calc(50% - 13rem);
+  background: url("./images/bg-pattern-mobile.svg") no-repeat center;
+  background-size: cover;
+}
+
+.card-background {
+  height: 19.6rem;
+  width: 26rem;
+  position: absolute;
+  left: calc(50% - 13rem);
+  top: -11.5rem;
+  background: url("./images/illustration-woman-online-mobile.svg") no-repeat center;
+  background-size: cover;
+}
+
+.faq-unit {
+  height: 4rem;
+  width: 100%;
+  margin-top: 2rem;
+  position: relative;
+  transition: .5s;
+}
+
+.faq-unit_words {
+  height: 3.2rem;
+  margin: 0 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-unit_words_arrow {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light-grayish-blue);
+}
+
+.arrow {
+  margin-top: .3rem;
+  width: .8rem;
+  height: .8rem;
+  background: url("./images/icon-arrow-down.svg") no-repeat center;
+  background-size: cover;
+  transition: .5s;
+}
+
+.question {
+  position: relative;
+  color: var(--very-dark-grayish-blue);
+}
+
+.question input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+input:checked ~ div .arrow {
+  transform: rotate(180deg);
+}
+
+.answer {
+  position: absolute;
+  bottom: 1rem;
+  color: var(--dark-grayish-blue-1);
+}
+
+.faq-unit:has(.question input:checked) {
+  height: 8rem;
+}
+
+.question:has(input:checked) {
+  color: var(--very-dark-desaturated-blue-1);
+  font-weight: 700;
+}
+
+/* --------------- footer --------------- */
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.attribution a {
+  color: var(--gray-500);
+  text-decoration: none;
+}
+/* -------------------------------------- */
+
+ /* -------------------------------------------- DESKTOP -------------------------------------------- */
+@media (min-width: 1280px) {
+
+  main {
+    width: 94rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  section {
+    width: 53%;
+    height: 100%;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  aside {
+    width: 47%;
+  }
+
+  h1 {
+    text-align: start;
+    margin-bottom: 3rem;
+  }
+
+  hr {
+    margin: 0;
+    width: 74%;
+  }
+
+  .faq-unit {
+    width: 70%;
+  }
+
+  .faq-unit_words {
+    margin: 0;
+  }
+
+  .undercard-background {
+    height: 126%;
+    width: 98rem;
+    left: -58.5rem;
+    top: -14rem;
+    background: url("./images/bg-pattern-desktop.svg") no-repeat center;
+    background-size: cover;
+  }
+
+  .card-background {
+    height: 36.4rem;
+    width: 48rem;
+    left: -8.6rem;
+    top: calc(50% - 18rem);
+    background: url("./images/illustration-woman-online-desktop.svg") no-repeat center;
+    background-size: cover;
+  }
+
+  .card-box {
+    width: 18rem;
+    height: 18rem;
+    left: -8.8rem;
+    top: calc(50% - 4rem);
+    position: absolute;
+    background: url("./images/illustration-box-desktop.svg") no-repeat center;
+    background-size: cover;
+  }
+
+  input:hover + div p {
+    color: var(--soft-red);
+  }
+
+}

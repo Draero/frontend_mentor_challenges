@@ -1,0 +1,173 @@
+@import url("../../general/colors.css");
+
+@font-face {
+  font-family: "Figtree", sans-serif;
+  src: url("/assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Italic Figtree" sans-serif;
+  src: url("/assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+}
+
+body {
+  /* general configuration */
+  background-color: var(--yellow);
+  /* font */
+  font-family: "Figtree", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  /* positioning */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 32rem;
+  height: 50rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  border: .1rem solid var(--gray-950);
+  background-color: aliceblue;
+  box-shadow: .8rem .8rem 0 var(--gray-950);
+  color: var(--gray-950);
+  display: flex;
+  flex-direction: column;
+}
+
+.illustration {
+  border-radius: 1rem;
+  width: 100%;
+  height: 20rem;
+  background-image: url("/assets/images/illustration-article.svg");
+  background-size: 90% cover;
+  background-repeat: no-repeat;
+  background-position: -2.9rem 0;
+}
+
+section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.learning {
+  margin: 1rem 0;
+}
+
+.learning button {
+  margin: 1.2rem 0;
+  border: none;
+  padding: .5rem .9rem;
+  border-radius: .4rem;
+  background-color: var(--yellow);
+}
+
+.learning button p {
+  font-size: 1.1rem;
+  font-weight: 800;
+  transform: scaleX(.9);
+}
+
+.learning > p {
+  font-size: 1.2rem;
+}
+
+.title h3 {
+  font-weight: bold;
+  font-size: 1.9rem;
+  transform: scaleX(1.03);
+  transform-origin: 0%;
+  margin: 1.2rem 0 1.6rem 0;
+}
+
+.title h3:active {
+  color: var(--yellow);
+}
+
+.title p {
+  color: var(--gray-500);
+  font-size: 1.3rem;
+  transform: scaleX(1.1);
+  transform-origin: 0%;
+  line-height: 2.2rem;
+}
+
+.profile-pic {
+  flex-grow: 1;
+  display: flex;
+  align-items: end;
+}
+
+.profile-pic figure {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic figure img {
+  width: 3.2rem;
+  margin-right: 1rem;
+}
+
+.profile-pic figure figcaption {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+@media (min-width: 736px) {
+  main {
+    width: 37.8rem;
+    height: 52rem;
+  }
+
+  .illustration {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0;
+  }
+  
+  .learning button {
+    margin-bottom: 1.6rem;
+  }
+
+  .learning button p {
+    font-size: 1.3rem;
+  }
+
+  .learning > p {
+    font-size: 1.4rem;
+  }
+
+
+  .title h3 {
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin: 1.2rem 0 2rem 0;
+  }
+
+  .title h3:hover {
+    color: var(--yellow);
+    cursor: pointer;
+  }
+
+  .title p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+
+/* --------------- footer --------------- */
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.attribution a {
+  color: var(--gray-500);
+  text-decoration: none;
+}
+/* -------------------------------------- */

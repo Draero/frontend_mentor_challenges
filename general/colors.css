@@ -1,0 +1,76 @@
+:root {
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --dark-cyan-1: hsl(184, 100%, 22%);
+  --dark-cyan-2: hsl(158, 36%, 37%);
+  --dark-cyan-3: hsl(185, 75%, 39%);
+  --cyan: hsl(178, 100%, 50%);
+  --green-teal: hsl(166, 100%, 37%);
+  --green: hsl(75, 94%, 57%);
+  /* -------------------------------------------------- */
+  --rose-800: hsl(332, 51%, 32%);
+  --light-red: hsl(0, 100%, 67%);
+  --orange: hsl(25, 97%, 53%);
+  --soft-red: hsl(14, 88%, 65%);
+  --bright-orange: hsl(31, 77%, 52%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --yellow: hsl(47, 88%, 63%);
+  /* -------------------------------------------------- */
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --bright-blue: hsl(245, 75%, 52%);
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --soft-blue-1: hsl(240, 73%, 65%);
+  --soft-blue-2: hsl(215, 51%, 70%);
+  --soft-violet-2: hsl(277, 64%, 61%);
+  --soft-violet-1: hsl(273, 75%, 66%);
+  --light-lavender: hsl(241, 100%, 89%);
+  /* -------------------------------------------------- */
+  --grey-700: hsl(0, 0%, 20%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --stone-600: hsl(30, 10%, 34%);
+  --gray-500: hsl(0, 0%, 42%);
+  --dark-grayish-blue-3: hsl(227, 10%, 46%);
+  --dark-grayish-blue-2: hsl(228, 12%, 48%);
+  --dark-grayish-blue-1: hsl(240, 6%, 50%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --desaturaded-blue: hsl(224, 23%, 55%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --slightly-transparent-white-sh: hsla(0, 0%, 100%, 0.6);
+  /* -------------------------------------------------- */
+  --gray-950: hsl(0, 0%, 7%);
+  --very-dark-blue-3: hsl(233, 47%, 7%);
+  --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --dark-desaturaded-blue: hsl(244, 38%, 16%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --very-dark-blue-1: hsl(216, 12%, 8%);
+  --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --very-dark-desaturated-blue-1: hsl(238, 29%, 16%);
+  --very-dark-blue-2: hsl(212, 21%, 14%);
+  --very-dark-desaturated-blue-2: hsl(229, 23%, 23%);
+  --dark-blue-1: hsl(213, 19%, 18%);
+  --dark-blue-3: hsl(218, 44%, 22%);
+  --dark-blue-2: hsl(223, 47%, 23%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  /* -------------------------------------------------- */
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  /* -------------------------------------------------- */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --stone-150: hsl(30, 18%, 87%);
+  --cream: hsl(30, 38%, 92%);
+  --stone-100: hsl(30, 54%, 90%);
+  --rose-50: hsl(330, 100%, 98%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+  --light-gray: hsl(212, 45%, 89%);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --pale-blue-1: hsl(225, 100%, 94%);
+  --pale-blue-2: hsl(221, 100%, 96%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --white: hsl(0, 0%, 100%);
+}

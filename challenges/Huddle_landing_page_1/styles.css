@@ -1,0 +1,126 @@
+@import url("../../general/general.css");
+
+html {
+  background-color: hsla(256, 40%, 49%);
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: grid;
+  height: 100%;
+  background: url(./images/bg-mobile.svg) no-repeat top;
+  background-size: 100% 54vh;
+  grid-template-rows: repeat(8, minmax(1fr, 5fr));
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: min-content;
+  grid-template-areas:
+    ". header  header  header  header  header  header  header  header  ."
+    ". aside   aside   aside   aside   aside   aside   aside   aside   ."
+    ". aside   aside   aside   aside   aside   aside   aside   aside   ."
+    ". aside   aside   aside   aside   aside   aside   aside   aside   ."
+    ". section section section section section section section section ."
+    ". section section section section section section section section ."
+    ". section section section section section section section section ."
+    ". footer  footer  footer  footer  footer  footer  footer  footer  .";
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+header a {
+  width: 45%;
+}
+
+header a img {
+  width: 100%;
+}
+
+aside {
+  grid-area: aside;
+  margin-bottom: 50px;
+}
+
+aside img {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  grid-area: section;
+}
+
+.section {
+  text-align: center;
+  width: 100%;
+}
+
+.section h2 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.section button {
+  background-color: white;
+  color: hsla(256, 40%, 49%);
+  border: none;
+  height: 3.8rem;
+  width: 20rem;
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+.section button:active {
+  color: white;
+  background-color: hsl(300, 69%, 71%);
+}
+
+footer {
+  grid-area: footer;
+}
+
+footer div {
+  width: 12rem;
+  margin: 0 auto;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-container {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid white;
+  fill: white;
+}
+
+.social-icon {
+  fill: inherit;
+  height: 50%;
+}
+
+.social-container:active {
+  fill: hsl(300, 69%, 71%);
+  border: 1px solid hsl(300, 69%, 71%);
+}

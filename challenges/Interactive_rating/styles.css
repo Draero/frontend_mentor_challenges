@@ -1,0 +1,114 @@
+/* ------------------------------- General styles ------------------------------- */
+@import url("../../general/colors.css");
+
+body {
+  background-color: var(--very-dark-blue-1);
+  font-family: 'Overpass', sans-serif; /* 400 - 700 */
+  font-size: 1.5rem;
+  color: var(--light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 34rem;
+  height: 36rem;
+  border-radius: 1.5rem;
+  background-color: var(--dark-blue-1);
+  padding: 2.2rem;
+}
+
+section { width: 100%; }
+button { border: none; cursor: pointer; }
+h1 { color: var(--white); margin-bottom: 1.4rem; }
+p { line-height: 2.2rem; }
+.text-center { text-align: center; }
+.alternative-padding { padding: 3rem 2.2rem; }
+
+.circular-container {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--very-dark-blue-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-first-section {
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-second-section {
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.orangeToggle {
+  background-color: var(--orange);
+}
+
+.whiteToggle {
+  color: var(--white);
+}
+/* ------------------------------------------------------------------------------ */
+/* -------------------------------- First Section -------------------------------- */
+/* Initial State */
+.main-first-section_star-icon {
+  width: 35%;
+  height: 35%;
+  background: url("./images/icon-star.svg") no-repeat center;
+  background-size: cover;
+}
+/* ------------- */
+/* Second State */
+.main-first-section_image-container {
+  align-self: center;
+  width: auto;
+}
+
+.main-first-section_selection-message-container {
+  align-self: center;
+  padding: 0;
+  background-color: var(--dark-blue-1);
+  padding: .7rem 1.2rem;
+  padding-bottom: .4rem;
+  color: var(--orange);
+  border-radius: 2rem;
+}
+/* ------------ */
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------ Second Section ------------------------------ */
+.main-second-section > button {
+  color: var(--white);
+  background-color: var(--orange);
+  height: 4.4rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  border-radius: 3rem;
+}
+
+.main-second-section > button:active {
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+.main-second-section_numbers-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.main-second-section_numbers-buttons button { color: var(--light-grey); }
+
+.main-second-section_numbers-buttons button:hover {
+  color: var(--white);
+  background-color: var(--light-grey);
+}
+/* ---------------------------------------------------------------------------- */

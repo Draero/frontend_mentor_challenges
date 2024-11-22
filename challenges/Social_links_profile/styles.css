@@ -1,0 +1,119 @@
+@import url("../../general/colors.css");
+
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+body {
+  /* general configuration */
+  background-color: var(--grey-900);
+  /* setting the paragraph font  Weights: 400, 600, 700  */
+  font-family: "Inter", sans-serif;
+  color: var(--white);
+  font-style: normal;
+  font-size: 1.4rem;
+  /* positioning */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 33rem;
+  background-color: var(--grey-800);
+  border-radius: 1rem;
+  padding: 2.4rem 2.8rem;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+}
+
+article figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article figure img {
+  border-radius: 50%;
+  width: 9rem;
+  margin-bottom: 3rem;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.dev-name {
+  font-size: 2.5rem;
+  transform: scaleX(1.04);
+  margin-bottom: 1rem;
+}
+
+.location {
+  color: var(--green);
+  transform: scaleX(1.12);
+  margin-bottom: 2.6rem;
+}
+
+.description {
+  transform: scaleX(1.06);
+  margin-bottom: 2rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+section > :nth-child(5) {
+  margin-bottom: 0;
+}
+
+button {
+  margin: .8rem 0;
+  height: 4.6rem;
+  border-radius: .7rem;
+  border: none;
+  background-color: var(--grey-700);
+  color: var(--white);
+  font-weight: bold;
+  transform: scaleX(1.04);
+}
+
+button:active {
+  background-color: var(--green);
+  color: var(--grey-900);
+}
+
+@media (min-width: 736px) {
+  
+  main {
+    width: 38rem;
+    padding: 3.6rem 4rem;
+  }
+
+  button:hover {
+    background-color: var(--green);
+    color: var(--grey-900);
+    caret-color: red;
+    cursor: pointer;
+  }
+}
+
+/* -------------- Coded by -------------- */
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.attribution a {
+  color: var(--green);
+  text-decoration: none;
+}
+/* -------------------------------------- */

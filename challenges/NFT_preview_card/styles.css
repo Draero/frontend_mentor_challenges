@@ -1,0 +1,156 @@
+@import url("../../general/colors.css");
+
+body {
+  background-color: var(--very-dark-blue-main-BG);
+  font-size: 1.6rem; font-family: 'Outfit', sans-serif;
+  color: var(--soft-blue-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 32rem; height: 53rem;
+  background-color: var(--very-dark-blue-card-BG);
+  padding: 2.4rem;
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem .8rem 1.6rem hsl(217, 55%, 10%);
+}
+
+.opacity-cyan-toggle {
+  background-color: var(--cyan);
+  opacity: .5;
+}
+
+.image-eye-bg-toggle {
+  background: url("./images/icon-view.svg") no-repeat center;
+  background-size: 5rem 5rem;
+}
+
+main figure { 
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.image-container {
+  width: 100%; height: auto;
+  display: grid;
+  grid-template: 1fr / 1fr;
+}
+
+main figure img {
+  width: 100%;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  border-radius: 1rem;
+}
+
+main figure figcaption {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-bg {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  border-radius: 1rem;
+}
+
+.image-eye-grid {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  position: relative;
+}
+
+.image-eye-bg {
+  height: 100%;
+  cursor: pointer;
+}
+
+.description h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--white);
+  margin: 2rem 0 1.5rem 0;
+  cursor: pointer;
+}
+
+.description h1:hover {
+  color: var(--cyan);
+}
+
+.description p {
+  line-height: 2.4rem;
+  font-weight: 300;
+}
+
+.ethereum-state {
+  font-weight: 400;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ethereum-value-container {
+  font-weight: 600;
+  color: var(--cyan);
+  display: flex;
+}
+
+.ethereum-img {
+  width: 1rem; height: 1.8rem;
+  margin-right: .6rem;
+  background: url("./images/icon-ethereum.svg") no-repeat center;
+  background-size: 100% 100%;
+}
+
+.left-time-container {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.left-clock {
+  width: 1.7rem; height: 1.7rem;
+  margin-right: .6rem;
+  background: url("./images/icon-clock.svg") no-repeat center;
+  background-size: cover;
+}
+
+.equilibrium-creator {
+  border-top: 0.1rem solid var(--very-dark-blue-line);
+  flex-grow: 1;
+  display: flex;
+  align-items: end;
+}
+
+.creator-info {
+  display: flex;
+  align-items: center;
+}
+
+.creator-info > span {
+  margin-left: .5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.creator-info > span:hover {
+  color: var(--cyan);
+}
+
+.creator-photo-container {
+  width: 3.2rem; height: 3.2rem;
+  border-radius: 50%;
+  padding: .1rem;
+  margin-right: 1.8rem;
+  background-color: var(--white);
+}
+
+.creator-photo {
+  width: 100%; height: 100%;
+  background: url("./images/image-avatar.png") no-repeat center;
+  background-size: 100% 100%;
+}

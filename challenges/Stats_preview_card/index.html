@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 9</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./desktop.css" media="(min-width: 1240px)">
+  </head>
+  <body>
+    <main>
+      <figure>
+        <div class="image-container">
+          <picture>
+            <source media="(min-width: 1240px)" srcset="./images/image-header-desktop.jpg">
+            <img src="./images/image-header-mobile.jpg" alt="Meeting_Image">
+          </picture>
+          <div class="image-opacity-violet"></div>
+        </div>
+        <figcaption>
+          <div class="description">
+            <h1>Get <span>insights</span> that help your business grow.</h1>
+            <p>
+              Discover the benefits of data analytics and make better decisions
+              regarding revenue, customer experience, and overall efficiency.
+            </p>
+          </div>
+          <div class="stats">
+            <div>
+              <h2>10k+</h2>
+              <p>COMPANIES</p>
+            </div>
+            <div>
+              <h2>314</h2>
+              <p>TEMPLATES</p>
+            </div>
+            <div>
+              <h2>12M+</h2>
+              <p>QUERIES</p>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const opacityViolet = document.querySelector('.image-opacity-violet');
+        const figcaption = document.querySelector('figcaption');
+        const img = document.querySelector('img');
+        const main = document.querySelector('main');
+        let sizeHeight = "", sizeWidth = "";
+        const observer = new ResizeObserver(entry => {
+          sizeHeight = entry[0].target.height;
+          sizeWidth = (entry[0].target.width * 180) / 100;
+          if (window.innerWidth > 1240) {
+            main.style.height = `${sizeHeight}px`;
+            figcaption.style.width = `${sizeWidth}px`;
+            opacityViolet.style.height = `${sizeHeight}px`;
+          }
+          else {
+            opacityViolet.style.height = `${sizeHeight}px`;
+            main.style.height = "81rem";
+            figcaption.style.width = "100%"
+          }
+        });
+        observer.observe(img);
+      });
+    </script>
+  </body>
+</html>

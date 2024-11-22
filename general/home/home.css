@@ -1,0 +1,10 @@
+@import url("../../styles.css");
+
+main {
+  width: inherit;
+  height: inherit;
+}
+
+main h1 {
+  font-size: 5rem;
+}
