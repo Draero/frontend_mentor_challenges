@@ -6,7 +6,7 @@ class main {
 
   constructor () {
     // Listeners for initial loading and hash changing
-    window.addEventListener("load", () => {
+    window.addEventListener("DOMContentLoaded", () => {
       this.routing = new router(document.getElementById("app"));
       this.routing.refreshingView(window.location.hash);
     });

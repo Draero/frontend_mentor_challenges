@@ -1,6 +1,7 @@
 main {
-  width: inherit;
+  width: 100%;
   height: inherit;
+  min-height: 100vh;
   font-size: 1.5rem;
   font-family: 'Lexend Deca', sans-serif;
   background-color: var(--very-light-gray);
@@ -18,6 +19,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .pool div:first-child {
@@ -53,6 +55,7 @@ main {
   padding: 4.7rem;
   display: flex;
   flex-direction: column;
+  height: fit-content;
 
 }
 
@@ -87,9 +90,9 @@ main {
 
 .card button:active {
   border: 1px solid var(--very-light-gray);
-  color: var(--very-light-gray);
   padding: 1.5rem 3.3rem;
   background-color: rgba(0, 0, 0, 0);
+  color: var(--very-light-gray);
 }
 
 /* -------------- Coded by -------------- */
