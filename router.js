@@ -1,9 +1,11 @@
 import threeColumnPreviewCardView from "./challenges/3-column_preview_card/3-column_preview_card.js";
+import blogPreviewCardView from "./challenges/Blog_preview_card/blog_preview_card.js";
 
 class Router {
 
   viewList = [
     threeColumnPreviewCardView,
+    blogPreviewCardView
   ]
 
   viewObject = this.viewList.reduce((acc, el) => ({
@@ -18,12 +20,12 @@ class Router {
 
   removeLinks (linkslist) {
     linkslist.forEach(el => {
-      const link = document.querySelector(`a[href="${el.href}"]`);
+      const link = document.querySelector(`link[href='${el.href}']`);
       if (link) {
         link.remove();
-        console.log("The link has been removed")
+        console.log("The link has been removed");
       } else {
-        console.log(`There is not ${el.href} href reference to remove`)
+        console.log(`There is not ${el.href} href reference to remove`);
       }
     });
   }
@@ -47,12 +49,12 @@ class Router {
         this.removeLinks(this.oldViewObject.links);
         this.addLinks(this.viewObject[newname].viewObject.links);
         this.oldViewObject = this.viewObject[newname].viewObject;
-        return this.viewObject[newname].getViewTemplate();
-      } else return this.viewObject[newname].getViewTemplate();
+        return this.viewObject[newname].getViewTemplate().then(response => response.text());
+      } else return this.viewObject[newname].getViewTemplate().then(response => response.text());
     } else {
       this.oldViewObject = this.viewObject[newname].viewObject;
       this.addLinks(this.oldViewObject.links);
-      return this.viewObject[newname].getViewTemplate();
+      return this.viewObject[newname].getViewTemplate().then(response => response.text());
     }
   }
 
@@ -129,8 +131,7 @@ class Router {
         break;
   
       case "#blog_preview_card":
-        this.appelement.innerHTML =
-          "<h1>Blog preview card</h1><p>This is blog preview card</p>";
+        this.appelement.innerHTML = await this.generateMain("blogPreviewCardView");
         break;
   
       default:

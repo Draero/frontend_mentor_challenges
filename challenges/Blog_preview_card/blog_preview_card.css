@@ -1,18 +1,17 @@
-@import url("../../general/colors.css");
-
 @font-face {
   font-family: "Figtree", sans-serif;
-  src: url("/assets/fonts/Figtree-VariableFont_wght.ttf");
+  src: url("/challenges/Blog_preview_card/assets/fonts/Figtree-VariableFont_wght.ttf");
 }
 
 @font-face {
   font-family: "Italic Figtree" sans-serif;
-  src: url("/assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+  src: url("/challenges/Blog_preview_card/assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
 }
 
-body {
+main {
   /* general configuration */
   background-color: var(--yellow);
+  min-height: 100vh;
   /* font */
   font-family: "Figtree", sans-serif;
   font-size: 1.4rem;
@@ -24,7 +23,7 @@ body {
   justify-content: center;
 }
 
-main {
+.pool {
   width: 32rem;
   height: 50rem;
   border-radius: 2rem;
@@ -35,13 +34,14 @@ main {
   color: var(--gray-950);
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .illustration {
   border-radius: 1rem;
   width: 100%;
   height: 20rem;
-  background-image: url("/assets/images/illustration-article.svg");
+  background-image: url("/challenges/Blog_preview_card/assets/images/illustration-article.svg");
   background-size: 90% cover;
   background-repeat: no-repeat;
   background-position: -2.9rem 0;
@@ -118,7 +118,7 @@ section {
 }
 
 @media (min-width: 736px) {
-  main {
+  .pool {
     width: 37.8rem;
     height: 52rem;
   }
