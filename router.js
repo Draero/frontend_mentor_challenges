@@ -131,7 +131,7 @@ class Router {
         break;
   
       case "#blog_preview_card":
-        /* this.appelement.innerHTML = await this.generateMain("blogPreviewCardView"); */
+        this.appelement.innerHTML = await this.generateMain("blogPreviewCardView");
         break;
   
       default:
