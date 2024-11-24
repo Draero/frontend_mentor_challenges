@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Figtree", sans-serif;
-  src: url("/challenges/Blog_preview_card/assets/fonts/Figtree-VariableFont_wght.ttf");
+  src: url("./challenges/Blog_preview_card/assets/fonts/Figtree-VariableFont_wght.ttf");
 }
 
 @font-face {
   font-family: "Italic Figtree" sans-serif;
-  src: url("/challenges/Blog_preview_card/assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+  src: url("./challenges/Blog_preview_card/assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
 }
 
 main {
@@ -41,7 +41,7 @@ main {
   border-radius: 1rem;
   width: 100%;
   height: 20rem;
-  background-image: url("/challenges/Blog_preview_card/assets/images/illustration-article.svg");
+  background-image: url("./challenges/Blog_preview_card/assets/images/illustration-article.svg");
   background-size: 90% cover;
   background-repeat: no-repeat;
   background-position: -2.9rem 0;
