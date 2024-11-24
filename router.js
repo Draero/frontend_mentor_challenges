@@ -112,7 +112,7 @@ class Router {
         break;
   
       case "#3-column_preview_card":
-        this.appelement.innerHTML = await this.generateMain("threeColumnPreviewCardView");
+        /* this.appelement.innerHTML = await this.generateMain("threeColumnPreviewCardView"); */
         break;
   
       case "#faq_accordion_card":
