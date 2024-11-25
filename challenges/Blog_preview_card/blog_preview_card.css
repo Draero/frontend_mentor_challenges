@@ -41,7 +41,7 @@ main {
   border-radius: 1rem;
   width: 100%;
   height: 20rem;
-  background-image: url("/challenges/Blog_preview_card/assets/images/card-img.svg");
+  background-image: url("/frontend_mentor_challenges/challenges/Blog_preview_card/assets/images/card-img.svg");
   background-size: 90% cover;
   background-repeat: no-repeat;
   background-position: -2.9rem 0;
