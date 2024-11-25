@@ -1,4 +1,8 @@
-body {
+html {
+  font-size: 62.5%;
+}
+
+main {
   grid-template-rows: repeat(9, minmax(1fr, 5fr));
   grid-template-columns: repeat(14, 1fr);
   background: url(./images/bg-desktop.svg) no-repeat 20% 0;

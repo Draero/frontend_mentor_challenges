@@ -1,13 +1,15 @@
 import threeColumnPreviewCardView from "./challenges/3-column_preview_card/3-column_preview_card.js";
 import blogPreviewCardView from "./challenges/Blog_preview_card/blog_preview_card.js";
 import faqAccordionCardView from "./challenges/FAQ_accordion_card/faq_accordion_card.js";
+import huddleLandingPage1View from "./challenges/Huddle_landing_page_1/huddle_landing_page_1.js";
 
 class Router {
 
   viewList = [
     threeColumnPreviewCardView,
     blogPreviewCardView,
-    faqAccordionCardView
+    faqAccordionCardView,
+    huddleLandingPage1View
   ]
 
   viewObject = this.viewList.reduce((acc, el) => ({
@@ -39,6 +41,7 @@ class Router {
       newlink.href = el.href;
       if ("crossorigin" in el) newlink.crossorigin = el.crossorigin;
       if ("type" in el) newlink.type = el.type;
+      if ("media" in el) newlink.media = el.media;
       document.head.appendChild(newlink);
       console.log("Link added");
     });
@@ -69,8 +72,7 @@ class Router {
         break;
   
       case "#huddle_landing_page_1":
-        this.appelement.innerHTML =
-          "<h1>Huddle landing page 1</h1><p>This is huddle landing page 1</p>";
+        this.appelement.innerHTML = await this.generateMain("huddleLandingPage1View");
         break;
   
       case "#profile_card":
