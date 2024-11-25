@@ -7,7 +7,7 @@ class huddleLandingPage1View {
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},
       {rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap"},
       {rel: "stylesheet", href: "./challenges/Huddle_landing_page_1/huddle_landing_page_1_style.css"},
-      {rel: "stylesheet", href: "./challenges/Huddle_landing_page_1/huddle_landing_page_1_tablet.css"}
+      {rel: "stylesheet", href: "./challenges/Huddle_landing_page_1/huddle_landing_page_1_tablet.css", media: "(min-width: 768px)"}
     ]
   };
 
