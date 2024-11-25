@@ -1,17 +1,18 @@
 /* ------------------------------- General styles ------------------------------- */
-@import url("../../general/colors.css");
 
-body {
+main {
+  min-height: 100vh;
   background-color: var(--very-dark-blue-1);
   font-family: 'Overpass', sans-serif; /* 400 - 700 */
   font-size: 1.5rem;
   color: var(--light-grey);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-main {
+.pool {
   width: 34rem;
   height: 36rem;
   border-radius: 1.5rem;
@@ -112,3 +113,17 @@ p { line-height: 2.2rem; }
   background-color: var(--light-grey);
 }
 /* ---------------------------------------------------------------------------- */
+
+/* --------------- footer --------------- */
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.attribution a {
+  color: var(--orange);
+  text-decoration: none;
+  cursor: pointer;
+}
+/* -------------------------------------- */

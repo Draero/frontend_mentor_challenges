@@ -4,12 +4,9 @@ import secondaryTemplate from "./components/templates/secondary-view.js";
 
 class generalViewController {
   constructor() {
-    this.body = document.querySelector("body");
-    this.body.innerHTML = mainTemplate.getViewTemplate();
+    this.appelement = document.getElementById("app");
+    this.appelement.innerHTML = mainTemplate.getViewTemplate();
     this.currentButton = false;
-    document.addEventListener("DOMContentLoaded", () => {
-      this.loadListeners();
-    });
   }
 
   loadListeners() {
@@ -40,11 +37,11 @@ class generalViewController {
   submitButtonListener(submitButton) {
     submitButton.addEventListener("click", () => {
       document.querySelector("main").remove();
-      this.body.innerHTML = secondaryTemplate.getViewTemplate(
+      this.appelement.innerHTML = secondaryTemplate.getViewTemplate(
         this.currentButton.textContent
       );
     });
   }
 }
 
-export default new generalViewController();
+export default generalViewController;

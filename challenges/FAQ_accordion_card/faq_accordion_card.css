@@ -155,6 +155,7 @@ input:checked ~ div .arrow {
 .attribution a {
   color: var(--soft-red);
   text-decoration: none;
+  cursor: pointer;
 }
 /* -------------------------------------- */
 

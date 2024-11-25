@@ -169,5 +169,6 @@ section {
 .attribution a {
   color: var(--gray-500);
   text-decoration: none;
+  cursor: pointer;
 }
 /* -------------------------------------- */

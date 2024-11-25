@@ -2,6 +2,7 @@ import threeColumnPreviewCardView from "./challenges/3-column_preview_card/3-col
 import blogPreviewCardView from "./challenges/Blog_preview_card/blog_preview_card.js";
 import faqAccordionCardView from "./challenges/FAQ_accordion_card/faq_accordion_card.js";
 import huddleLandingPage1View from "./challenges/Huddle_landing_page_1/huddle_landing_page_1.js";
+import interactiveRatingView from "./challenges/Interactive_rating/interactive_rating_route.js";
 
 class Router {
 
@@ -9,14 +10,19 @@ class Router {
     threeColumnPreviewCardView,
     blogPreviewCardView,
     faqAccordionCardView,
-    huddleLandingPage1View
+    huddleLandingPage1View,
+    interactiveRatingView
   ]
 
   viewObject = this.viewList.reduce((acc, el) => ({
     ...acc, 
     [el.viewObject.name]: el}), {});
-
+  
+  // object to refresh link
   oldViewObject = {};
+
+  // for views without html return
+  auxViewObject = null;
 
   constructor (appelement) {
     this.appelement = appelement;
@@ -48,23 +54,26 @@ class Router {
 
   }
 
-  generateMain (newname) {
+  generateMain (newname, ishtmlstring) {
     if (Object.keys(this.oldViewObject).length !== 0) {
       if (this.oldViewObject.name !== newname) {
         this.removeLinks(this.oldViewObject.links);
         this.addLinks(this.viewObject[newname].viewObject.links);
         this.oldViewObject = this.viewObject[newname].viewObject;
-        return this.viewObject[newname].getViewTemplate().then(response => response.text());
-      } else return this.viewObject[newname].getViewTemplate().then(response => response.text());
+        if (ishtmlstring) return this.viewObject[newname].getViewTemplate().then(response => response.text());
+      } else {
+        if (ishtmlstring)  return this.viewObject[newname].getViewTemplate().then(response => response.text());
+      }
     } else {
       this.oldViewObject = this.viewObject[newname].viewObject;
       this.addLinks(this.oldViewObject.links);
-      return this.viewObject[newname].getViewTemplate().then(response => response.text());
+      if (ishtmlstring) return this.viewObject[newname].getViewTemplate().then(response => response.text());
     }
   }
 
   async refreshingView (newhash) {
     const route = newhash || "#home";
+    this.auxViewObject = null;
 
     switch (route) {
       case "#home":
@@ -72,7 +81,7 @@ class Router {
         break;
   
       case "#huddle_landing_page_1":
-        this.appelement.innerHTML = await this.generateMain("huddleLandingPage1View");
+        this.appelement.innerHTML = await this.generateMain("huddleLandingPage1View", true);
         break;
   
       case "#profile_card":
@@ -91,8 +100,9 @@ class Router {
         break;
   
       case "#interactive_rating":
-        this.appelement.innerHTML =
-          "<h1>Interactive rating</h1><p>This is interactive rating</p>";
+        this.auxViewObject = interactiveRatingView.getViewTemplate();
+        this.generateMain("interactiveRatingView", false);
+        this.auxViewObject.loadListeners();
         break;
   
       case "#qr_code":
@@ -116,11 +126,11 @@ class Router {
         break;
   
       case "#3-column_preview_card":
-        this.appelement.innerHTML = await this.generateMain("threeColumnPreviewCardView");
+        this.appelement.innerHTML = await this.generateMain("threeColumnPreviewCardView", true);
         break;
   
       case "#faq_accordion_card":
-        this.appelement.innerHTML = await this.generateMain("faqAccordionCardView");
+        this.appelement.innerHTML = await this.generateMain("faqAccordionCardView", true);
         break;
   
       case "#recipe_page":
@@ -134,7 +144,7 @@ class Router {
         break;
   
       case "#blog_preview_card":
-        this.appelement.innerHTML = await this.generateMain("blogPreviewCardView");
+        this.appelement.innerHTML = await this.generateMain("blogPreviewCardView", true);
         break;
   
       default:
