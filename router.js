@@ -1,11 +1,13 @@
 import threeColumnPreviewCardView from "./challenges/3-column_preview_card/3-column_preview_card.js";
 import blogPreviewCardView from "./challenges/Blog_preview_card/blog_preview_card.js";
+import faqAccordionCardView from "./challenges/FAQ_accordion_card/faq_accordion_card.js";
 
 class Router {
 
   viewList = [
     threeColumnPreviewCardView,
-    blogPreviewCardView
+    blogPreviewCardView,
+    faqAccordionCardView
   ]
 
   viewObject = this.viewList.reduce((acc, el) => ({
@@ -116,8 +118,7 @@ class Router {
         break;
   
       case "#faq_accordion_card":
-        this.appelement.innerHTML =
-          "<h1>FAQ accordion card</h1><p>This is FAQ accordion card</p>";
+        this.appelement.innerHTML = await this.generateMain("faqAccordionCardView");
         break;
   
       case "#recipe_page":
