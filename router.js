@@ -3,6 +3,7 @@ import blogPreviewCardView from "./challenges/Blog_preview_card/blog_preview_car
 import faqAccordionCardView from "./challenges/FAQ_accordion_card/faq_accordion_card.js";
 import huddleLandingPage1View from "./challenges/Huddle_landing_page_1/huddle_landing_page_1.js";
 import interactiveRatingView from "./challenges/Interactive_rating/interactive_rating_route.js";
+import nftPreviewCardView from "./challenges/NFT_preview_card/nft_preview_card_route.js";
 
 class Router {
 
@@ -11,7 +12,8 @@ class Router {
     blogPreviewCardView,
     faqAccordionCardView,
     huddleLandingPage1View,
-    interactiveRatingView
+    interactiveRatingView,
+    nftPreviewCardView
   ]
 
   viewObject = this.viewList.reduce((acc, el) => ({
@@ -111,8 +113,9 @@ class Router {
         break;
   
       case "#nft_preview_card":
-        this.appelement.innerHTML =
-          "<h1>NFT preview card</h1><p>This is NFT preview card</p>";
+        this.auxViewObject = nftPreviewCardView.getViewTemplate();
+        this.generateMain("nftPreviewCardView", false);
+        this.auxViewObject.loadListeners();
         break;
   
       case "#order_summary":
