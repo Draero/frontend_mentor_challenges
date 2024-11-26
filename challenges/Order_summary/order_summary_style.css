@@ -1,18 +1,18 @@
-@import url("../../general/colors.css");
+#app { background-color: var(--pale-blue-1); }
 
-html { background-color: var(--pale-blue-1); }
-
-body {
+main {
+  min-height: 100vh;
   font-size: 1.6rem;
   font-family: "Red Hat Display", sans-serif;
   background: url("./images/pattern-background-mobile.svg") no-repeat 0 0;
   background-size: 100% 35%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-main {
+.pool {
   width: 33rem;
   height: 56rem;
   background-color: var(--very-pale-blue);
@@ -127,9 +127,26 @@ figure figcaption {
 .transaction-buttons a {
   text-decoration: none;
   font-weight: 700;
-  color: var(--very-pale-blue);
+  color: var(--desaturaded-blue);
 }
 
 .transaction-buttons a:active {
   color: var(--dark-blue-2);
 }
+
+a {
+  cursor: pointer;
+}
+
+/* -------------- Coded by -------------- */
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--bright-blue);
+}
+/* -------------------------------------- */
