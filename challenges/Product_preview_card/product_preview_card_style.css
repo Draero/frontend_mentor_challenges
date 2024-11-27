@@ -5,6 +5,7 @@ main {
   font-size: 1.4rem;
   color: var(--dark-grayish-blue-2);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -97,3 +98,17 @@ section button .svg-shop-cart {
 section button:active {
   background-color: hsl(156, 42%, 18%);
 }
+
+/* -------------- Coded by -------------- */
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.attribution a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--dark-cyan-2);
+}
+/* -------------------------------------- */

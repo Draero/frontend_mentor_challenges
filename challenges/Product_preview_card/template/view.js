@@ -18,6 +18,10 @@ class cardView {
             </button>
           </section>
         </div>
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa" target="_blank">Frontend Mentor</a>. 
+          Coded by <a>egg</a>.
+        </div>
       </main>
     `;
   }

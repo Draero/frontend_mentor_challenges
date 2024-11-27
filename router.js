@@ -5,7 +5,9 @@ import huddleLandingPage1View from "./challenges/Huddle_landing_page_1/huddle_la
 import interactiveRatingView from "./challenges/Interactive_rating/interactive_rating_route.js";
 import nftPreviewCardView from "./challenges/NFT_preview_card/nft_preview_card_route.js";
 import orderSummaryView from "./challenges/Order_summary/order_summary.js";
-import productPreviewCardView from "./challenges/Product_preview_card/product_preview_card_route.js"
+import productPreviewCardView from "./challenges/Product_preview_card/product_preview_card_route.js";
+import profileCardView from "./challenges/Profile_card/profile_card.js";
+import qrCodeView from "./challenges/QR_code/qr_code.js";
 
 class Router {
 
@@ -17,7 +19,9 @@ class Router {
     interactiveRatingView,
     nftPreviewCardView,
     orderSummaryView,
-    productPreviewCardView
+    productPreviewCardView,
+    profileCardView,
+    qrCodeView
   ]
 
   viewObject = this.viewList.reduce((acc, el) => ({
@@ -91,8 +95,7 @@ class Router {
         break;
   
       case "#profile_card":
-        this.appelement.innerHTML =
-          "<h1>Profile card</h1><p>This is profile card</p>";
+        this.appelement.innerHTML = await this.generateMain("profileCardView", true);
         break;
   
       case "#results_summary":
@@ -113,8 +116,7 @@ class Router {
         break;
   
       case "#qr_code":
-        this.appelement.innerHTML =
-          "<h1>QR code</h1><p>This is QR code</p>";
+        this.appelement.innerHTML = await this.generateMain("qrCodeView", true);
         break;
   
       case "#nft_preview_card":

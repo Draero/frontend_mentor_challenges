@@ -1,6 +1,5 @@
-@import url("../../general/colors.css");
-
-body {
+main {
+  min-height: 100vh;
   font-family: 'Kumbh Sans', sans-serif;
   background-color: var(--dark-cyan-3);
   display: grid;
