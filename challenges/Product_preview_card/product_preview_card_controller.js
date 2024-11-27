@@ -15,7 +15,7 @@ class generalViewController {
       let aside = document.querySelector('aside');
       setTimeout(() => {
         aside.style.height = pool.offsetHeight + 'px';
-      }, 100);
+      }, 200);
     }
   }
 }
