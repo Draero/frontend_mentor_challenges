@@ -1,6 +1,5 @@
-@import url("../../general/colors.css");
-
-body {
+main {
+  min-height: 100vh;
   background-color: var(--cream);
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
@@ -10,7 +9,7 @@ body {
   align-items: center;
 }
 
-main {
+.pool {
   width: 90%;
   border-radius: 1rem;
   display: flex;
