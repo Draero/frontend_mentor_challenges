@@ -1,11 +1,10 @@
-@import url("../../general/colors.css");
-
 @font-face {
   font-family: "Inter", sans-serif;
   src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
 }
 
-body {
+main {
+  min-height: 100vh;
   /* general configuration */
   background-color: var(--grey-900);
   /* setting the paragraph font  Weights: 400, 600, 700  */
@@ -20,7 +19,7 @@ body {
   align-items: center;
 }
 
-main {
+.pool {
   width: 33rem;
   background-color: var(--grey-800);
   border-radius: 1rem;
@@ -92,7 +91,7 @@ button:active {
 
 @media (min-width: 736px) {
   
-  main {
+  .pool {
     width: 38rem;
     padding: 3.6rem 4rem;
   }
@@ -113,6 +112,7 @@ button:active {
 }
 
 .attribution a {
+  cursor: pointer;
   color: var(--green);
   text-decoration: none;
 }

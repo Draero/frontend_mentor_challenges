@@ -10,6 +10,7 @@ import profileCardView from "./challenges/Profile_card/profile_card.js";
 import qrCodeView from "./challenges/QR_code/qr_code.js";
 import recipePageView from "./challenges/Recipe_page/recipe_page.js";
 import resultsSummaryView from "./challenges/Results_summary/results_summary_route.js";
+import socialLinksProfileView from "./challenges/Social_links_profile/social_links_profile.js";
 
 class Router {
 
@@ -25,7 +26,8 @@ class Router {
     profileCardView,
     qrCodeView,
     recipePageView,
-    resultsSummaryView
+    resultsSummaryView,
+    socialLinksProfileView
   ]
 
   viewObject = this.viewList.reduce((acc, el) => ({
@@ -153,8 +155,7 @@ class Router {
         break;
   
       case "#social_links_profile":
-        this.appelement.innerHTML =
-          "<h1>Social links profile</h1><p>This is social links profile</p>";
+        this.appelement.innerHTML = await this.generateMain("socialLinksProfileView", true);
         break;
   
       case "#blog_preview_card":
