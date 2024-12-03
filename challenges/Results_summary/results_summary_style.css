@@ -1,6 +1,5 @@
-@import url("../../general/colors.css");
-
-body {
+main {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +21,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: var(--pale-blue);
+  color: var(--pale-blue-2);
 }
 
 h1 {
@@ -165,3 +164,17 @@ section {
   background-image: none;
   background-color: var(--dark-gray-blue);
 }
+
+/* -------------- Coded by -------------- */
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.attribution a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--cobalt-blue);
+}
+/* -------------------------------------- */

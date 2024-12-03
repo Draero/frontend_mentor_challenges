@@ -9,6 +9,7 @@ import productPreviewCardView from "./challenges/Product_preview_card/product_pr
 import profileCardView from "./challenges/Profile_card/profile_card.js";
 import qrCodeView from "./challenges/QR_code/qr_code.js";
 import recipePageView from "./challenges/Recipe_page/recipe_page.js";
+import resultsSummaryView from "./challenges/Results_summary/results_summary_route.js";
 
 class Router {
 
@@ -23,7 +24,8 @@ class Router {
     productPreviewCardView,
     profileCardView,
     qrCodeView,
-    recipePageView
+    recipePageView,
+    resultsSummaryView
   ]
 
   viewObject = this.viewList.reduce((acc, el) => ({
@@ -101,8 +103,9 @@ class Router {
         break;
   
       case "#results_summary":
-        this.appelement.innerHTML =
-          "<h1>Results summary</h1><p>This is results summary</p>";
+        this.auxViewObject = resultsSummaryView.getViewTemplate();
+        this.generateMain("resultsSummaryView", false);
+        this.auxViewObject.loadListeners();
         break;
   
       case "#product_preview_card":

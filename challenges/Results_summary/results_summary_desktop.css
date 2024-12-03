@@ -1,10 +1,10 @@
-body {
+main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-main {
+.pool {
   display: flex;
   box-shadow: 1rem 1rem 2rem 1rem hsl(221, 100%, 96%);
   border-radius: 5rem;
