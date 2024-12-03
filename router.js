@@ -8,6 +8,7 @@ import orderSummaryView from "./challenges/Order_summary/order_summary.js";
 import productPreviewCardView from "./challenges/Product_preview_card/product_preview_card_route.js";
 import profileCardView from "./challenges/Profile_card/profile_card.js";
 import qrCodeView from "./challenges/QR_code/qr_code.js";
+import recipePageView from "./challenges/Recipe_page/recipe_page.js";
 
 class Router {
 
@@ -21,7 +22,8 @@ class Router {
     orderSummaryView,
     productPreviewCardView,
     profileCardView,
-    qrCodeView
+    qrCodeView,
+    recipePageView
   ]
 
   viewObject = this.viewList.reduce((acc, el) => ({
@@ -127,6 +129,7 @@ class Router {
   
       case "#order_summary":
         this.appelement.innerHTML = await this.generateMain("orderSummaryView", true);
+        const el = "el";
         break;
   
       case "#stats_preview_card":
@@ -143,8 +146,7 @@ class Router {
         break;
   
       case "#recipe_page":
-        this.appelement.innerHTML =
-          "<h1>Recipe page</h1><p>This is recipe page</p>";
+        this.appelement.innerHTML = await this.generateMain("recipePageView", true);
         break;
   
       case "#social_links_profile":

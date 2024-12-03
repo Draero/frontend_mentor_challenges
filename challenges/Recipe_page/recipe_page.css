@@ -1,6 +1,5 @@
-@import url("../../general/colors.css");
-
-body {
+main {
+  min-height: 100vh;
   background-color: var(--stone-150);
   /* setting the paragraph font */
   font-family: "Outfit", system-ui;
@@ -9,7 +8,7 @@ body {
   font-size: 1.6rem;
 }
 
-main {
+.pool {
   background-color: var(--white);
   padding-bottom: 3rem;
 }
@@ -119,13 +118,14 @@ main {
 }
 
 /* -------------- Coded by -------------- */
-footer {
+.attribution {
   font-size: 1.1rem;
   text-align: center;
   margin-bottom: 1rem;
 }
 
-footer a {
+.attribution a {
+  cursor: pointer;
   text-decoration: none;
   color: var(--rose-800);
 }
@@ -160,14 +160,14 @@ hr {
 /* ----------------------------------------- */
 
 @media (min-width: 736px) {
-  body {
+  main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
 
-  main {
+  .pool {
     max-width: 736px;
     padding: 4rem;
     margin: 2rem 0;
