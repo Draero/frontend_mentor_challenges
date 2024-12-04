@@ -8,18 +8,89 @@ html {
 
 body {
   width: 100vw; height: fit-content;
+  padding-left: 1.2rem;
   max-width: 100vw; min-height: 100vh;
   font-size: 1.6rem;
 }
 
 #app {
-  width: inherit;
+  width: 100%;
   min-height: 100vh;
 }
 
-.main-nav {
+.navigation {
   position: fixed;
+  left: -21.8rem;
+  z-index: 5;
+  width: 22rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  transition: .5s;
+}
+
+.navigation .nav-pool {
+  width: 1.2rem;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  right: -1rem;
+  top: 0;
+  border: .1rem solid blue;
+}
+
+.navigation .nav-pool svg {
+  position: absolute;
+  fill: blue;
+  z-index: 5;
+  left: -.66rem;
+  top: calc(50% - 2.4rem);
+}
+
+.navigation input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-radius: inherit;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 6;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: inherit;
   gap: 2rem;
+  overflow: auto;
+  scrollbar-width: thin; /* Barra delgada */
+  scrollbar-color: #888 transparent; /* Color de la barra y fondo transparente */
+}
+
+.main-nav a {
+  text-decoration: none;
+  width: fit-content;
+}
+
+.wrapper {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.top { min-height: 3rem; }; .bottom { min-height: 4rem; }
+
+.navigation:has(.nav-pool input:checked) {
+  left: 0;
+}
+
+.nav-input:checked ~ .nav-arrow {
+  transform: rotate(180deg);
 }

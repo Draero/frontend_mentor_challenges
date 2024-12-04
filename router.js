@@ -92,6 +92,7 @@ class Router {
   async refreshingView (newhash) {
     const route = newhash || "#home";
     this.auxViewObject = null;
+    document.querySelector(".nav-input").checked = false;
 
     switch (route) {
       case "#home":
