@@ -4,6 +4,13 @@ class statsPreviewCardView {
 
   viewObject = {
     name: "statsPreviewCardView",
+    navStyles: {
+      inputB: "var(--soft-violet-2)",
+      linkC: "var(--white)",
+      navB: "var(--dark-desaturaded-blue)",
+      linkB: "var(--very-dark-blue-3)",
+      navFont: "'Inter', sans-serif"
+    },
     links: [
       {rel: "preconnect", href: "https://fonts.googleapis.com"},
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},

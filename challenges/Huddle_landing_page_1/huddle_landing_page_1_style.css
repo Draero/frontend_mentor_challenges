@@ -1,5 +1,5 @@
 html {
-  background-color: hsla(256, 40%, 49%);
+  background-color: var(--violet);
 }
 
 main {
@@ -76,7 +76,7 @@ section {
 
 .section button {
   background-color: white;
-  color: hsla(256, 40%, 49%);
+  color: var(--violet);
   border: none;
   height: 3.8rem;
   width: 20rem;
@@ -86,7 +86,7 @@ section {
 
 .section button:active {
   color: white;
-  background-color: hsl(300, 69%, 71%);
+  background-color: var(--soft-violet-3);
 }
 
 footer {
@@ -121,6 +121,6 @@ footer div {
 }
 
 .social-container:active {
-  fill: hsl(300, 69%, 71%);
+  fill: var(--soft-violet-3);
   border: 1px solid hsl(300, 69%, 71%);
 }

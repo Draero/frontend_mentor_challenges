@@ -1,9 +1,14 @@
 :root {
+
+  --selected_nav_bg: transparent;
+  --app_nav_hover_color: transparent;
+  /* -------------------------------------------------- */
   --very-dark-cyan: hsl(179, 100%, 13%);
   --dark-cyan-1: hsl(184, 100%, 22%);
   --dark-cyan-2: hsl(158, 36%, 37%);
   --dark-cyan-3: hsl(185, 75%, 39%);
   --cyan: hsl(178, 100%, 50%);
+  --soft-green: hsl(163, 76%, 69%);
   --green-teal: hsl(166, 100%, 37%);
   --green: hsl(75, 94%, 57%);
   /* -------------------------------------------------- */
@@ -17,13 +22,17 @@
   /* -------------------------------------------------- */
   --cobalt-blue: hsl(234, 85%, 45%);
   --light-royal-blue: hsl(241, 81%, 54%);
+  --bright-blue-1: hsl(216, 95%, 58%);
   --violet-blue: hsla(256, 72%, 46%, 1);
   --bright-blue: hsl(245, 75%, 52%);
   --light-slate-blue: hsl(252, 100%, 67%);
+  --blue: hsl(201, 100%, 49%);
   --soft-blue-1: hsl(240, 73%, 65%);
   --soft-blue-2: hsl(215, 51%, 70%);
+  --soft-violet-3: hsl(300, 69%, 71%);
   --soft-violet-2: hsl(277, 64%, 61%);
   --soft-violet-1: hsl(273, 75%, 66%);
+  --violet: hsla(256, 40%, 49%);
   --light-lavender: hsl(241, 100%, 89%);
   /* -------------------------------------------------- */
   --grey-700: hsl(0, 0%, 20%);

@@ -2,6 +2,13 @@ class qrCodeView {
 
   viewObject = {
     name: "qrCodeView",
+    navStyles: {
+      inputB: "var(--dark-blue-3)",
+      linkC: "var(--white)",
+      navB: "var(--grayish-blue)",
+      linkB: "var(--bright-blue-1)",
+      navFont: "'Outfit', sans-serif"
+    },
     links: [
       {rel: "preconnect", href: "https://fonts.googleapis.com"},
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},

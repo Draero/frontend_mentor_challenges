@@ -4,6 +4,13 @@ class resultsSummaryView {
 
   viewObject = {
     name: "resultsSummaryView",
+    navStyles: {
+      inputB: "var(--light-red)",
+      linkC: "var(--white)",
+      navB: "var(--light-slate-blue)",
+      linkB: "var(--orangey-yellow)",
+      navFont: "'Hanken Grotesk', sans-serif"
+    },
     links: [
       {rel: "preconnect", href: "https://fonts.googleapis.com"},
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},

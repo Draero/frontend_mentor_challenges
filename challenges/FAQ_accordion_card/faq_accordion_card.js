@@ -2,6 +2,13 @@ class faqAccordionCardView {
 
   viewObject = {
     name: "faqAccordionCardView",
+    navStyles: {
+      inputB: "var(--soft-red)",
+      linkC: "var(--light-grayish-blue)",
+      navB: "var(--dark-grayish-blue-1)",
+      linkB: "var(--soft-red)",
+      navFont: "'Kumbh Sans', sans-serif"
+    },
     links: [
       {rel: "preconnect", href: "https://fonts.googleapis.com"},
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},

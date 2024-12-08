@@ -2,6 +2,13 @@ class orderSummaryView {
 
   viewObject = {
     name: "orderSummaryView",
+    navStyles: {
+      inputB: "var(--bright-blue)",
+      linkC: "var(--white)",
+      navB: "var(--desaturaded-blue)",
+      linkB: "var(--soft-green)",
+      navFont: '"Red Hat Display", sans-serif'
+    },
     links: [
       {rel: "preconnect", href: "https://fonts.googleapis.com"},
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},

@@ -39,7 +39,6 @@ body {
   position: absolute;
   right: -1rem;
   top: 0;
-  border: .1rem solid blue;
 }
 
 .navigation .nav-pool svg {
@@ -69,15 +68,20 @@ body {
   flex-direction: column;
   align-items: center;
   width: inherit;
-  gap: 2rem;
   overflow: auto;
-  scrollbar-width: thin; /* Barra delgada */
-  scrollbar-color: #888 transparent; /* Color de la barra y fondo transparente */
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
 }
 
 .main-nav a {
   text-decoration: none;
-  width: fit-content;
+  width: 100%;
+  padding: .5rem 0;
+  text-align: center;
+}
+
+.main-nav a:hover {
+  background-color: var(--app_nav_hover_color);
 }
 
 .wrapper {
@@ -93,4 +97,8 @@ body {
 
 .nav-input:checked ~ .nav-arrow {
   transform: rotate(180deg);
+}
+
+.selected-nav-bg {
+  background-color: var(--selected_nav_bg);
 }

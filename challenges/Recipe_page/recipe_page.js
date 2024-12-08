@@ -2,6 +2,13 @@ class recipePageView {
 
   viewObject = {
     name: "recipePageView",
+    navStyles: {
+      inputB: "var(--brown-800)",
+      linkC: "var(--white)",
+      navB: "var(--stone-600)",
+      linkB: "var(--rose-800)",
+      navFont: '"Outfit", system-ui'
+    },
     links: [
       {rel: "preconnect", href: "https://fonts.googleapis.com"},
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},

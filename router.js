@@ -1,3 +1,5 @@
+import mainService from "./general/mainservice.js";
+
 import threeColumnPreviewCardView from "./challenges/3-column_preview_card/3-column_preview_card.js";
 import blogPreviewCardView from "./challenges/Blog_preview_card/blog_preview_card.js";
 import faqAccordionCardView from "./challenges/FAQ_accordion_card/faq_accordion_card.js";
@@ -42,56 +44,42 @@ class Router {
   // for views without html return
   auxViewObject = null;
 
+  // Navigation styles
+  navObject = {};
+
+  // Previous selected link
+  oldAElement = {};
+
   constructor (appelement) {
     this.appelement = appelement;
-  }
-
-  removeLinks (linkslist) {
-    linkslist.forEach(el => {
-      const link = document.querySelector(`link[href='${el.href}']`);
-      if (link) {
-        link.remove();
-        console.log("The link has been removed");
-      } else {
-        console.log(`There is not ${el.href} href reference to remove`);
-      }
-    });
-  }
-
-  addLinks (linkslist) {
-    linkslist.forEach(el => {
-      const newlink = document.createElement('link');
-      newlink.rel = el.rel;
-      newlink.href = el.href;
-      if ("crossorigin" in el) newlink.crossorigin = el.crossorigin;
-      if ("type" in el) newlink.type = el.type;
-      if ("media" in el) newlink.media = el.media;
-      document.head.appendChild(newlink);
-      console.log("Link added");
-    });
-
   }
 
   generateMain (newname, ishtmlstring) {
     if (Object.keys(this.oldViewObject).length !== 0) {
       if (this.oldViewObject.name !== newname) {
-        this.removeLinks(this.oldViewObject.links);
-        this.addLinks(this.viewObject[newname].viewObject.links);
+        mainService.removeLinks(this.oldViewObject.links);
+        mainService.addLinks(this.viewObject[newname].viewObject.links);
         this.oldViewObject = this.viewObject[newname].viewObject;
+        mainService.setNavStyles(this.oldViewObject.navStyles, this.navObject);
         if (ishtmlstring) return this.viewObject[newname].getViewTemplate().then(response => response.text());
       } else {
         if (ishtmlstring)  return this.viewObject[newname].getViewTemplate().then(response => response.text());
       }
     } else {
       this.oldViewObject = this.viewObject[newname].viewObject;
-      this.addLinks(this.oldViewObject.links);
+      mainService.setNavStyles(this.oldViewObject.navStyles, this.navObject);
+      mainService.addLinks(this.oldViewObject.links);
       if (ishtmlstring) return this.viewObject[newname].getViewTemplate().then(response => response.text());
     }
   }
 
-  async refreshingView (newhash) {
+  async refreshingView (newhash, navObject) {
     const route = newhash || "#home";
     this.auxViewObject = null;
+    if (Object.keys(this.navObject).length === 0) {
+      this.navObject = navObject;
+      mainService.addClickAListener(this.navObject.mainNavA, this.oldAElement);
+    }
     document.querySelector(".nav-input").checked = false;
 
     switch (route) {

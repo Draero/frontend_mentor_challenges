@@ -4,6 +4,13 @@ class interactiveRatingView {
 
   viewObject = {
     name: "interactiveRatingView",
+    navStyles: {
+      inputB: "var(--light-grey)",
+      linkC: "white",
+      navB: "var(--dark-blue-1)",
+      linkB: "var(--orange)",
+      navFont: "'Overpass', sans-serif"
+    },
     links: [
       {rel: "preconnect", href: "https://fonts.googleapis.com"},
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},

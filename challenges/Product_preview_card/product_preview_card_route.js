@@ -4,6 +4,13 @@ class productPreviewCardView {
 
   viewObject = {
     name: "productPreviewCardView",
+    navStyles: {
+      inputB: "var(--dark-cyan-2)",
+      linkC: "var(--cream)",
+      navB: "var(--dark-grayish-blue-2)",
+      linkB: "var(--very-dark-blue-2)",
+      navFont: "'Montserrat', sans-serif"
+    },
     links: [
       {rel: "preconnect", href: "https://fonts.googleapis.com"},
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},

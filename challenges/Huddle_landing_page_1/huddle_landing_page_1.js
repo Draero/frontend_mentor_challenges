@@ -2,6 +2,13 @@ class huddleLandingPage1View {
 
   viewObject = {
     name: "huddleLandingPage1View",
+    navStyles: {
+      inputB: "var(--soft-violet-3)",
+      linkC: "white",
+      navB: "var(--soft-violet-1)",
+      linkB: "var(--violet)",
+      navFont: '"Open Sans", sans-serif'
+    },
     links: [
       {rel: "preconnect", href: "https://fonts.googleapis.com"},
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},

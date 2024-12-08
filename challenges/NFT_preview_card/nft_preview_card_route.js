@@ -4,6 +4,13 @@ class nftPreviewCardView {
 
   viewObject = {
     name: "nftPreviewCardView",
+    navStyles: {
+      inputB: "var(--soft-blue-2)",
+      linkC: "var(--white)",
+      navB: "var(--very-dark-blue-card-BG)",
+      linkB: "var(--cyan)",
+      navFont: "'Outfit', sans-serif"
+    },
     links: [
       {rel: "preconnect", href: "https://fonts.googleapis.com"},
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},

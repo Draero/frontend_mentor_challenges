@@ -2,6 +2,13 @@ class profileCardView {
 
   viewObject = {
     name: "profileCardView",
+    navStyles: {
+      inputB: "var(--very-dark-desaturated-blue-2)",
+      linkC: "var(--white)",
+      navB: "var(--dark-grayish-blue-3)",
+      linkB: "var(--dark-cyan-3)",
+      navFont: "'Kumbh Sans', sans-serif"
+    },
     links: [
       {rel: "preconnect", href: "https://fonts.googleapis.com"},
       {rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous"},
