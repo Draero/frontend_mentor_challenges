@@ -27,7 +27,7 @@ class mainService {
     });
   }
 
-  setNavStyles (navStyles, navObject) {
+  setNavStyles (navStyles, navObject, fL) {
     setTimeout(() => {
       const root = document.documentElement.style;
       navObject.navigation.style.backgroundColor = navStyles.navB;
@@ -39,21 +39,18 @@ class mainService {
       navObject.mainNavA.forEach(a => {
         a.style.color = navStyles.linkC;
       });
-    }, 500);
+    }, fL ? 0 : 500);
   }
 
-  addClickAListener (alist, oldAElement) {
-    alist.forEach(a => {
-      a.addEventListener("click", (node) => {
-        if (Object.keys(oldAElement).length !== 0) {
-          oldAElement.classList.toggle("selected-nav-bg");
-          node.currentTarget.classList.toggle("selected-nav-bg");
-          oldAElement = node.currentTarget;
-        }
-        oldAElement = node.currentTarget;
-        oldAElement.classList.toggle("selected-nav-bg");
-      });
-    });
+  selectARoute (route, oldAElement) {
+    const selectedA = route !== "#home" ? 
+      document.querySelector(`a[href='${route}']`) : 
+      document.querySelector(`a[href=""]`);
+
+    if (oldAElement) oldAElement.classList.toggle("selected-nav-bg");
+    oldAElement = selectedA;
+    if (oldAElement) oldAElement.classList.toggle("selected-nav-bg");
+    return oldAElement;
   }
 
 }

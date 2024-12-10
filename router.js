@@ -1,5 +1,6 @@
 import mainService from "./general/mainservice.js";
 
+import home from "./general/home/home.js";
 import threeColumnPreviewCardView from "./challenges/3-column_preview_card/3-column_preview_card.js";
 import blogPreviewCardView from "./challenges/Blog_preview_card/blog_preview_card.js";
 import faqAccordionCardView from "./challenges/FAQ_accordion_card/faq_accordion_card.js";
@@ -18,6 +19,7 @@ import statsPreviewCardView from "./challenges/Stats_preview_card/stats_preview_
 class Router {
 
   viewList = [
+    home,
     threeColumnPreviewCardView,
     blogPreviewCardView,
     faqAccordionCardView,
@@ -48,110 +50,112 @@ class Router {
   navObject = {};
 
   // Previous selected link
-  oldAElement = {};
+  oldAElement = null;
+
+  // Fist load flag
+  firstLoad = true;
 
   constructor (appelement) {
     this.appelement = appelement;
   }
 
-  generateMain (newname, ishtmlstring) {
+  generateMain (newname, ishtmlstring, route) {
+    this.oldAElement = mainService.selectARoute(route, this.oldAElement);
     if (Object.keys(this.oldViewObject).length !== 0) {
       if (this.oldViewObject.name !== newname) {
         mainService.removeLinks(this.oldViewObject.links);
         mainService.addLinks(this.viewObject[newname].viewObject.links);
         this.oldViewObject = this.viewObject[newname].viewObject;
-        mainService.setNavStyles(this.oldViewObject.navStyles, this.navObject);
+        mainService.setNavStyles(this.oldViewObject.navStyles, this.navObject, this.firstLoad);
         if (ishtmlstring) return this.viewObject[newname].getViewTemplate().then(response => response.text());
       } else {
         if (ishtmlstring)  return this.viewObject[newname].getViewTemplate().then(response => response.text());
       }
     } else {
       this.oldViewObject = this.viewObject[newname].viewObject;
-      mainService.setNavStyles(this.oldViewObject.navStyles, this.navObject);
+      mainService.setNavStyles(this.oldViewObject.navStyles, this.navObject, this.firstLoad);
       mainService.addLinks(this.oldViewObject.links);
       if (ishtmlstring) return this.viewObject[newname].getViewTemplate().then(response => response.text());
     }
+    this.firstLoad = false;
   }
 
   async refreshingView (newhash, navObject) {
     const route = newhash || "#home";
     this.auxViewObject = null;
-    if (Object.keys(this.navObject).length === 0) {
-      this.navObject = navObject;
-      mainService.addClickAListener(this.navObject.mainNavA, this.oldAElement);
-    }
+    if (Object.keys(this.navObject).length === 0) this.navObject = navObject;
     document.querySelector(".nav-input").checked = false;
 
     switch (route) {
       case "#home":
-        this.appelement.innerHTML = "<h1>Home Page</h1><p>Welcome to the home page!</p>";
+        this.appelement.innerHTML = await this.generateMain("home", true, route);
         break;
   
       case "#huddle_landing_page_1":
-        this.appelement.innerHTML = await this.generateMain("huddleLandingPage1View", true);
+        this.appelement.innerHTML = await this.generateMain("huddleLandingPage1View", true, route);
         break;
   
       case "#profile_card":
-        this.appelement.innerHTML = await this.generateMain("profileCardView", true);
+        this.appelement.innerHTML = await this.generateMain("profileCardView", true, route);
         break;
   
       case "#results_summary":
         this.auxViewObject = resultsSummaryView.getViewTemplate();
-        this.generateMain("resultsSummaryView", false);
+        this.generateMain("resultsSummaryView", false, route);
         this.auxViewObject.loadListeners();
         break;
   
       case "#product_preview_card":
         this.auxViewObject = productPreviewCardView.getViewTemplate();
-        this.generateMain("productPreviewCardView", false);
+        this.generateMain("productPreviewCardView", false, route);
         this.auxViewObject.loadListeners();
         break;
   
       case "#interactive_rating":
         this.auxViewObject = interactiveRatingView.getViewTemplate();
-        this.generateMain("interactiveRatingView", false);
+        this.generateMain("interactiveRatingView", false, route);
         this.auxViewObject.loadListeners();
         break;
   
       case "#qr_code":
-        this.appelement.innerHTML = await this.generateMain("qrCodeView", true);
+        this.appelement.innerHTML = await this.generateMain("qrCodeView", true, route);
         break;
   
       case "#nft_preview_card":
         this.auxViewObject = nftPreviewCardView.getViewTemplate();
-        this.generateMain("nftPreviewCardView", false);
+        this.generateMain("nftPreviewCardView", false, route);
         this.auxViewObject.loadListeners();
         break;
   
       case "#order_summary":
-        this.appelement.innerHTML = await this.generateMain("orderSummaryView", true);
+        this.appelement.innerHTML = await this.generateMain("orderSummaryView", true, route);
         const el = "el";
         break;
   
       case "#stats_preview_card":
         this.auxViewObject = statsPreviewCardView.getViewTemplate();
-        this.generateMain("statsPreviewCardView", false);
+        this.generateMain("statsPreviewCardView", false, route);
         this.auxViewObject.loadListeners();
         break;
   
       case "#3-column_preview_card":
-        this.appelement.innerHTML = await this.generateMain("threeColumnPreviewCardView", true);
+        this.appelement.innerHTML = await this.generateMain("threeColumnPreviewCardView", true, route);
         break;
   
       case "#faq_accordion_card":
-        this.appelement.innerHTML = await this.generateMain("faqAccordionCardView", true);
+        this.appelement.innerHTML = await this.generateMain("faqAccordionCardView", true, route);
         break;
   
       case "#recipe_page":
-        this.appelement.innerHTML = await this.generateMain("recipePageView", true);
+        this.appelement.innerHTML = await this.generateMain("recipePageView", true, route);
         break;
   
       case "#social_links_profile":
-        this.appelement.innerHTML = await this.generateMain("socialLinksProfileView", true);
+        this.appelement.innerHTML = await this.generateMain("socialLinksProfileView", true, route);
         break;
   
       case "#blog_preview_card":
-        this.appelement.innerHTML = await this.generateMain("blogPreviewCardView", true);
+        this.appelement.innerHTML = await this.generateMain("blogPreviewCardView", true, route);
         break;
   
       default:
