@@ -1,39 +1,49 @@
 import mainService from "./general/mainservice.js";
 import router from "./router.js";
 
-class main {
+class Main {
 
-  routing = {};
+  routing = null;
   navObject = {};
 
-  constructor () {
-    // Listeners for initial loading, hash changing, clicking, and hover
-    window.addEventListener("DOMContentLoaded", () => {
-      this.routing = new router(document.getElementById("app"));
-      this.navObject = {
-        navigation: document.querySelector(".navigation"),
-        mainNavA: document.querySelectorAll(".main-nav_a"),
-        navArrow: document.querySelector(".nav-arrow"),
-        navPool: document.querySelector(".nav-pool")
-      }
-      this.routing.refreshingView(window.location.hash, this.navObject);
-    });
-    window.addEventListener("hashchange", () => {
-      this.routing.refreshingView(window.location.hash);
-    });
-    document.addEventListener("click", (event) => {
-      const htmlClass = event.target.className;
-      if (!(
-        htmlClass === "main-nav" || 
-        htmlClass === "nav-input" || 
-        htmlClass === "wrapper top" || 
-        htmlClass === "wrapper bottom"))
-        document.querySelector(".nav-input").checked = false;
-    });
-    // -----------------------------------------------
+  constructor() {
+    window.addEventListener("DOMContentLoaded", this.initialize.bind(this));
+    window.addEventListener("hashchange", this.onHashChange.bind(this));
+    document.addEventListener("click", this.handleClickOutsideNav.bind(this));
   }
 
-  
+  initialize() {
+    if (!this.routing) {
+      this.routing = new router(document.getElementById("app"));
+    }
+    this.navObject = {
+      navigation: document.querySelector(".navigation"),
+      mainNavA: document.querySelectorAll(".main-nav_a"),
+      navArrow: document.querySelector(".nav-arrow"),
+      navPool: document.querySelector(".nav-pool"),
+    };
+    this.routing.refreshView(window.location.hash, this.navObject);
+  }
+
+  onHashChange() {
+    if (this.routing) {
+      this.routing.refreshView(window.location.hash);
+    }
+  }
+
+  handleClickOutsideNav(event) {
+    const htmlClass = event.target.className;
+    if (
+      !(
+        htmlClass === "main-nav" ||
+        htmlClass === "nav-input" ||
+        htmlClass === "wrapper top" ||
+        htmlClass === "wrapper bottom"
+      )
+    ) {
+      document.querySelector(".nav-input").checked = false;
+    }
+  }
 }
 
-export default new main();
+export default new Main();

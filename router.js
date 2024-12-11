@@ -80,7 +80,7 @@ class Router {
     this.firstLoad = false;
   }
 
-  async refreshingView (newhash, navObject) {
+  async refreshView (newhash, navObject) {
     const route = newhash || "#home";
     this.auxViewObject = null;
     if (Object.keys(this.navObject).length === 0) this.navObject = navObject;
