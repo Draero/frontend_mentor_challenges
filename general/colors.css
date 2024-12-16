@@ -23,6 +23,7 @@
   --cobalt-blue: hsl(234, 85%, 45%);
   --light-royal-blue: hsl(241, 81%, 54%);
   --bright-blue-1: hsl(216, 95%, 58%);
+  --dark-purple: hsl(292, 42%, 14%);
   --violet-blue: hsla(256, 72%, 46%, 1);
   --bright-blue: hsl(245, 75%, 52%);
   --light-slate-blue: hsl(252, 100%, 67%);
@@ -31,8 +32,11 @@
   --soft-blue-2: hsl(215, 51%, 70%);
   --soft-violet-3: hsl(300, 69%, 71%);
   --soft-violet-2: hsl(277, 64%, 61%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --star-purple: hsl(281, 83%, 54%);
   --soft-violet-1: hsl(273, 75%, 66%);
   --violet: hsla(256, 40%, 49%);
+  --light-pink: hsl(275, 100%, 97%);
   --light-lavender: hsl(241, 100%, 89%);
   /* -------------------------------------------------- */
   --grey-700: hsl(0, 0%, 20%);
