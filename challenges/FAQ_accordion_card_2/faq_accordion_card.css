@@ -43,7 +43,7 @@ main {
 
 .faq-title .star {
   width: 2.4rem; height: 2.4rem;
-  background-image: url("./assets/images/icon-star.svg");
+  background-image: url("./images/icon-star.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0;
@@ -73,7 +73,7 @@ main {
 .expandSymbol {
   width: 3rem;
   height: 3rem;
-  background-image: url("./assets/images/icon-plus.svg");
+  background-image: url("./images/icon-plus.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0;
