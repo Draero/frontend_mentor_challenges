@@ -93,3 +93,18 @@ main {
   width: 100%;
   background-color: var(--light-pink);
 }
+
+/* --------------- footer --------------- */
+.attribution {
+  position: relative;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.attribution a {
+  color: var(--star-purple);
+  text-decoration: none;
+  cursor: pointer;
+}
+/* -------------------------------------- */

@@ -75,6 +75,12 @@ class cardView {
             </div>
           </section>
         </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a>egg</a>.
+        </div>
       </main>
     `;
   }
