@@ -82,13 +82,6 @@ body {
   background-color: var(--app_nav_hover_color);
 }
 
-.wrapper {
-  flex-grow: 1;
-  width: 100%;
-}
-
-.top { min-height: 3rem; }; .bottom { min-height: 4rem; }
-
 .navigation:has(.nav-pool input:checked) {
   left: 0;
 }
