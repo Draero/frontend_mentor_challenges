@@ -53,6 +53,29 @@ class mainService {
     return oldAElement;
   }
 
+  /* -------- When view charge for the first time firstload = true -------- */
+  refreshBg (firstLoad, mobileFlag, mobilePercentage, desktopPercentage) {
+    const root = document.documentElement.style;
+    if (window.innerWidth <= window.innerHeight && !mobileFlag) {
+      root.setProperty('--bgImage', 'url("./images/background-pattern-mobile.svg")');
+      root.setProperty('--bgHeight', `${Math.round(window.innerWidth * mobilePercentage)}px`);
+      return true;
+    }
+    else if (window.innerWidth <= window.innerHeight) {
+      root.setProperty('--bgHeight', `${Math.round(window.innerWidth * mobilePercentage)}px`);
+      return mobileFlag;
+    }
+    else if ((window.innerWidth > window.innerHeight && mobileFlag) || firstLoad) {
+      root.setProperty('--bgImage', 'url("./images/background-pattern-desktop.svg")');
+      root.setProperty('--bgHeight', `${Math.round(window.innerWidth * desktopPercentage)}px`);
+      return false;
+    }
+    else {
+      root.setProperty('--bgHeight', `${Math.round(window.innerWidth * desktopPercentage)}px`);
+      return mobileFlag;
+    }
+  }
+
 }
 
 export default new mainService();

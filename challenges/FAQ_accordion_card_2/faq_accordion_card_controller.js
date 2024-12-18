@@ -1,4 +1,5 @@
 import cardView from "./template/view.js";
+import mainservice from "../../general/mainservice.js";
 
 class generalViewController {
 
@@ -11,33 +12,13 @@ class generalViewController {
     this.appelement = document.getElementById("app");
     this.appelement.innerHTML = cardView.getViewTemplate();
     window.addEventListener("resize", () => {
-      this.refreshBg();
+      this.mobileFlag = mainservice.refreshBg(false, this.mobileFlag, this.mobilePercentage, this.desktopPercentage);
     });
-  }
-
-  refreshBg (firstLoad) {
-    const root = document.documentElement.style;
-    if (window.innerWidth <= window.innerHeight && !this.mobileFlag) {
-      root.setProperty('--bgImage', 'url("./images/background-pattern-mobile.svg")');
-      root.setProperty('--bgHeight', `${Math.round(window.innerWidth * this.mobilePercentage)}px`);
-      this.mobileFlag = true;
-    }
-    else if (window.innerWidth <= window.innerHeight) {
-      root.setProperty('--bgHeight', `${Math.round(window.innerWidth * this.mobilePercentage)}px`);
-    }
-    else if ((window.innerWidth > window.innerHeight && this.mobileFlag) || firstLoad) {
-      root.setProperty('--bgImage', 'url("./images/background-pattern-desktop.svg")');
-      root.setProperty('--bgHeight', `${Math.round(window.innerWidth * this.desktopPercentage)}px`);
-      this.mobileFlag = false;
-    }
-    else {
-      root.setProperty('--bgHeight', `${Math.round(window.innerWidth * this.desktopPercentage)}px`);
-    }
   }
 
   loadListeners () {
     this.bg = document.querySelector(".bg");
-    this.refreshBg(true);
+    this.mobileFlag = mainservice.refreshBg(true, this.mobileFlag, this.mobilePercentage, this.desktopPercentage);
   }
 }
 
