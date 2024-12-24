@@ -1,5 +1,5 @@
-@import url("./general/colors.css");
-@import url("./general/globalvariables.css");
+@import url("./general/styles/colors.css");
+@import url("./general/styles/globalvariables.css");
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 

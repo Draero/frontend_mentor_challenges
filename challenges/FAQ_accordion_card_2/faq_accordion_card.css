@@ -50,6 +50,15 @@ main {
   margin-right: 3rem;
 }
 
+.question {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  transition: .5s;
+}
+
 .question-list {
   flex-grow: 1;
   overflow: auto;
@@ -68,6 +77,21 @@ main {
   align-items: center;
   font-size: 1.6rem;
   cursor: pointer;
+  background-color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+
+.question-pool:hover {
+  color: var(--star-purple);
+}
+
+.question-pool:active {
+  color: var(--dark-purple);
+}
+
+.expandSymbol-minus {
+  background-image: url("./images/icon-minus.svg") !important;
 }
 
 .expandSymbol {
@@ -92,6 +116,43 @@ main {
   height: .2rem;
   width: 100%;
   background-color: var(--light-pink);
+}
+
+/* -------------------------------------------- DESKTOP -------------------------------------------- */
+@media (min-width: 720px) {
+
+  main {
+    font-size: 1.6rem;
+  }
+
+  .faq-card {
+    height: 56.5rem;
+    width: 60rem;
+    padding: 4rem 0 4rem 4rem;
+  }
+
+  .faq-title {
+    font-size: 3.8rem;
+    margin-bottom: .3rem;
+  }
+
+  .faq-title .star {
+    width: 4rem; height: 4rem;
+  }
+
+  .question-list {
+    padding-right: 4rem;
+    gap: 2.4rem;
+  }
+
+  .question-pool {
+    font-size: 1.8rem;
+  }
+
+  .question-answer {
+    padding-top: 2.5rem;
+    line-height: 2.4rem;
+  }
 }
 
 /* --------------- footer --------------- */

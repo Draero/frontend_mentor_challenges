@@ -1,5 +1,4 @@
-import mainService from "./general/mainservice.js";
-import router from "./router.js";
+import router from "./general/services/router.js";
 
 class Main {
 

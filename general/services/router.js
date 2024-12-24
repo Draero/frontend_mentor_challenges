@@ -1,21 +1,21 @@
-import mainService from "./general/mainservice.js";
+import mainService from "./mainservice.js";
 
-import home from "./general/home/home.js";
-import threeColumnPreviewCardView from "./challenges/3-column_preview_card/3-column_preview_card.js";
-import blogPreviewCardView from "./challenges/Blog_preview_card/blog_preview_card.js";
-import faqAccordionCard1View from "./challenges/FAQ_accordion_card_1/faq_accordion_card.js";
-import huddleLandingPage1View from "./challenges/Huddle_landing_page_1/huddle_landing_page_1.js";
-import interactiveRatingView from "./challenges/Interactive_rating/interactive_rating_route.js";
-import nftPreviewCardView from "./challenges/NFT_preview_card/nft_preview_card_route.js";
-import orderSummaryView from "./challenges/Order_summary/order_summary.js";
-import productPreviewCardView from "./challenges/Product_preview_card/product_preview_card_route.js";
-import profileCardView from "./challenges/Profile_card/profile_card.js";
-import qrCodeView from "./challenges/QR_code/qr_code.js";
-import recipePageView from "./challenges/Recipe_page/recipe_page.js";
-import resultsSummaryView from "./challenges/Results_summary/results_summary_route.js";
-import socialLinksProfileView from "./challenges/Social_links_profile/social_links_profile.js";
-import statsPreviewCardView from "./challenges/Stats_preview_card/stats_preview_card_route.js"
-import faqAccordionCard2View from "./challenges/FAQ_accordion_card_2/faq_accordion_card_route.js";
+import home from "../home/home.js";
+import threeColumnPreviewCardView from "../../challenges/3-column_preview_card/3-column_preview_card.js";
+import blogPreviewCardView from "../../challenges/Blog_preview_card/blog_preview_card.js";
+import faqAccordionCard1View from "../../challenges/FAQ_accordion_card_1/faq_accordion_card.js";
+import huddleLandingPage1View from "../../challenges/Huddle_landing_page_1/huddle_landing_page_1.js";
+import interactiveRatingView from "../../challenges/Interactive_rating/interactive_rating_route.js";
+import nftPreviewCardView from "../../challenges/NFT_preview_card/nft_preview_card_route.js";
+import orderSummaryView from "../../challenges/Order_summary/order_summary.js";
+import productPreviewCardView from "../../challenges/Product_preview_card/product_preview_card_route.js";
+import profileCardView from "../../challenges/Profile_card/profile_card.js";
+import qrCodeView from "../../challenges/QR_code/qr_code.js";
+import recipePageView from "../../challenges/Recipe_page/recipe_page.js";
+import resultsSummaryView from "../../challenges/Results_summary/results_summary_route.js";
+import socialLinksProfileView from "../../challenges/Social_links_profile/social_links_profile.js";
+import statsPreviewCardView from "../../challenges/Stats_preview_card/stats_preview_card_route.js"
+import faqAccordionCard2View from "../../challenges/FAQ_accordion_card_2/faq_accordion_card_route.js";
 
 class Router {
 

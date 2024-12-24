@@ -54,26 +54,62 @@ class mainService {
   }
 
   /* -------- When view charge for the first time firstload = true -------- */
-  refreshBg (firstLoad, mobileFlag, mobilePercentage, desktopPercentage) {
+  refreshBg (firstLoad, mobileFlag, mobilePercentage, desktopPercentage, sizeLimit) {
     const root = document.documentElement.style;
-    if (window.innerWidth <= window.innerHeight && !mobileFlag) {
+    if (window.innerWidth <= sizeLimit && !mobileFlag[0]) {
       root.setProperty('--bgImage', 'url("./images/background-pattern-mobile.svg")');
       root.setProperty('--bgHeight', `${Math.round(window.innerWidth * mobilePercentage)}px`);
-      return true;
+      return [true, "resize"];
     }
-    else if (window.innerWidth <= window.innerHeight) {
+    else if (window.innerWidth <= sizeLimit) {
       root.setProperty('--bgHeight', `${Math.round(window.innerWidth * mobilePercentage)}px`);
-      return mobileFlag;
+      return [mobileFlag[0], "keep"];
     }
-    else if ((window.innerWidth > window.innerHeight && mobileFlag) || firstLoad) {
+    else if ((window.innerWidth > sizeLimit && mobileFlag[0]) || firstLoad) {
       root.setProperty('--bgImage', 'url("./images/background-pattern-desktop.svg")');
       root.setProperty('--bgHeight', `${Math.round(window.innerWidth * desktopPercentage)}px`);
-      return false;
+      return [false, "resize"];
     }
     else {
       root.setProperty('--bgHeight', `${Math.round(window.innerWidth * desktopPercentage)}px`);
-      return mobileFlag;
+      return [mobileFlag[0], "keep"];
     }
+  }
+
+  accordionElement (clean, htmlClass, question, answer, arrayIndex, arrayLength, accChildHeights) {
+    const fatherElement = document.querySelector(`.${htmlClass}`);
+    if (clean) fatherElement.innerHTML = "";
+    const childElement = `
+      <div>
+        <div class="question-pool">
+          <p class="question-text">
+            ${question}
+          </p>
+          <div class="expandSymbol"></div>
+        </div>
+        <p class="question-answer">
+          ${answer}
+        </p>
+      </div>
+    `;
+    fatherElement.insertAdjacentHTML("beforeend", childElement);
+    if (!(arrayIndex === arrayLength - 1 ? true : false)) 
+      fatherElement.insertAdjacentHTML("beforeend", "<div class='hr'></div>");
+
+    const addedChild = fatherElement.children[arrayIndex * 2];
+    const heightsObject = {
+      ...accChildHeights, 
+      [`${arrayIndex * 2}`]: {
+        dropDown: false,
+        qTextHeight: addedChild.children[0].offsetHeight,
+        qAnswerHeight: addedChild.children[1].offsetHeight,
+      }};
+    
+    const htmlAnswer = addedChild.children[1];
+    addedChild.classList.add("question");
+    htmlAnswer.style.position = "absolute";
+    htmlAnswer.style.bottom = "0px";
+    return heightsObject;
   }
 
 }
